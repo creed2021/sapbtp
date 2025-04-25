@@ -1,0 +1,23 @@
+<mvc:View controllerName="curso.project1.controller.ProductsView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <Page id="page2" title="{i18n>title}">
+    <content>
+    <Text id="t2" text="Pagina Productos"></Text>
+   	<l:VerticalLayout content="{/Products}">
+		<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+			<GenericTile
+				backgroundImage="../images/6011.jpg"
+				frameType="TwoByOne" press="pressOnTileOne" header="{ProductName}">
+				<TileContent footer="{UnitPrice}">
+					<NewsContent
+						contentText="{QuantityPerUnit}"
+						subheader="Stock - {UnitsInStock}" />
+				</TileContent>
+			</GenericTile>
+		</SlideTile>
+	</l:VerticalLayout>
+    </content>
+    </Page>
+</mvc:View>

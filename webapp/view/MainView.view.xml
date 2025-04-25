@@ -1,0 +1,11 @@
+<mvc:View controllerName="curso.project1.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+    <Text id="t1" text="hola mundo"></Text>
+    <Button id="bt1" text="Productos" press="onProducts" ></Button>
+    <Button id="bt2" text="Invoices" press="onInvoices" ></Button>
+    </content>
+    </Page>
+</mvc:View>
