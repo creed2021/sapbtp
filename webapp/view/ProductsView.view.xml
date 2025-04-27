@@ -9,7 +9,7 @@
 		<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
 			<GenericTile
 				backgroundImage="../images/6011.jpg"
-				frameType="TwoByOne" press="pressOnTileOne" header="{ProductName}">
+				frameType="TwoByOne" press="pressOnTileOne" header="{ProductName} - {ProductID}">
 				<TileContent footer="{UnitPrice}">
 					<NewsContent
 						contentText="{QuantityPerUnit}"

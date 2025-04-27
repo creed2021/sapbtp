@@ -107,6 +107,13 @@
           "target": [
             "TargetInvoicesView"
           ]
+        },
+        {
+          "name": "RouteDetalleView",
+          "pattern": "DetalleView/{productId}",
+          "target": [
+            "TargetDetalleView"
+          ]
         }
       ],
       "targets": {
@@ -121,6 +128,10 @@
         "TargetInvoicesView": {
           "id": "InvoicesView",
           "name": "InvoicesView"
+        },
+        "TargetDetalleView": {
+          "id": "DetalleView",
+          "name": "DetalleView"
         }
       }
     },

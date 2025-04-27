@@ -1,0 +1,16 @@
+<mvc:View controllerName="curso.project1.controller.DetalleView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <Page id="paged" title="{i18n>title}">
+    <content>
+    <Text id="td1" text="Pagina Detalle Productos"></Text>
+   <VBox>
+			<Text text="{ProductName}"/>
+			<Text text="{UnitPrice}"/>
+			<Text text="{QuantityPerUnit}"/>
+			<Text text="{UnitsInStock}"/>
+		</VBox>
+    </content>
+    </Page>
+</mvc:View>

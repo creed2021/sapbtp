@@ -1,7 +1,10 @@
 <mvc:View controllerName="curso.project1.controller.InvoicesView"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    xmlns:core="sap.ui.core">
+    xmlns:core="sap.ui.core"
+     xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:smartList="sap.ui.comp.smartlist"
+    xmlns:smartTable="sap.ui.comp.smarttable">
     <Page id="pageI" title="{i18n>title}">
     <content>
     <Text id="t3" text="hola Invoices"></Text>
@@ -10,6 +13,12 @@
     <core:Item key="{combo>name}" text="{combo>es_name}" />
     </items>
     </Select>
+    <smartFilterBar:SmartFilterBar id="smartFilterBar" persistencyKey="UniqueAndStablePersistencyKey" entitySet="Products" considerSelectionVariants="true" />
+        <smartList:SmartList id="smartProductList" smartFilter="smartFilterBar" entitySet="Products" expandFields="Category" header="Products List" showRowCount="true" showFullScreenButton="true" enableAutoBinding="true">
+            <smartList:listItemTemplate>
+                <StandardListItem id="listTemplate" type="Navigation" press="handleListItemPress" title="{ProductName}" info="{= ${UnitPrice} + ' €' }" description="{Category/CategoryName}" />
+            </smartList:listItemTemplate>
+        </smartList:SmartList>
     </content>
     </Page>
 </mvc:View>
