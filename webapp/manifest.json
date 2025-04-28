@@ -114,6 +114,13 @@
           "target": [
             "TargetDetalleView"
           ]
+        },
+        {
+          "name": "RouteEmpleadosView",
+          "pattern": "Empleados",
+          "target": [
+            "TargetEmpleadosView"
+          ]
         }
       ],
       "targets": {
@@ -132,6 +139,10 @@
         "TargetDetalleView": {
           "id": "DetalleView",
           "name": "DetalleView"
+        },
+        "TargetEmpleadosView": {
+          "id": "EmpleadosView",
+          "name": "EmpleadosView"
         }
       }
     },

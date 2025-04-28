@@ -1,0 +1,23 @@
+<mvc:View controllerName="curso.project1.controller.EmpleadosView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <Page id="pageE" title="{i18n>title}">
+    <content>
+    <Text id="t21" text="Pagina Empleados"></Text>
+   	<l:VerticalLayout content="{/Customers}">
+		<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+			<GenericTile
+				backgroundImage="../images/6011.jpg"
+				frameType="TwoByOne" press="pressOnTileOne" header="{ContactName} - {CustomerID}">
+				<TileContent footer="{ContactTitle}">
+					<NewsContent
+						contentText="{CompanyName}"
+						subheader="Direccion - {Address}" />
+				</TileContent>
+			</GenericTile>
+		</SlideTile>
+	</l:VerticalLayout>
+    </content>
+    </Page>
+</mvc:View>
