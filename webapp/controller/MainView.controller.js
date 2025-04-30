@@ -24,6 +24,12 @@ sap.ui.define([
             var oRouter = UIComponent.getRouterFor(this);
             oRouter.navTo("RouteEmpleadosView");
 
+        },
+        onSuppliers:function(){
+
+            var oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteSuppliersView");
+
         }
     });
 });

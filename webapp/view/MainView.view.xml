@@ -7,6 +7,7 @@
     <Button id="bt1" text="Productos" press="onProducts" ></Button>
     <Button id="bt2" text="Invoices" press="onInvoices" ></Button>
     <Button id="bt3" text="Customers" press="onCustomers"></Button>
+    <Button id="bt4" text="Suppliers" press="onSuppliers"></Button>
     </content>
     </Page>
 </mvc:View>

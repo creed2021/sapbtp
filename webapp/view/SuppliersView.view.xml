@@ -1,0 +1,26 @@
+<mvc:View controllerName="curso.project1.controller.SuppliersView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+     xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:smartList="sap.ui.comp.smartlist"
+    xmlns:smartTable="sap.ui.comp.smarttable">
+    <Page id="pageS" title="{i18n>title}">
+    <content>
+    <Text id="t20" text="hola Suppliers"></Text>
+    <smartFilterBar:SmartFilterBar id="smartFilterBar2" persistencyKey="SmartFilter_Explored" entitySet="Products">
+   </smartFilterBar:SmartFilterBar>
+        
+        <smartTable:SmartTable id="smarttable2" initiallyVisibleFields="SupplierID,CompanyName"
+        
+        entitySet="Suppliers"
+        tableType="ResponsiveTable" 
+        enableExport="true" useVariantManagement="true"
+        useTablePersonalisation="true" header="Suppliers" showRowCount="true"
+        enableAutoBinding="true" enableAutoColumnWidth="false" persistencyKey="SmartTable_Explored">
+        
+        </smartTable:SmartTable>
+       
+    </content>
+    </Page>
+</mvc:View>

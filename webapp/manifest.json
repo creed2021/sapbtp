@@ -121,6 +121,13 @@
           "target": [
             "TargetEmpleadosView"
           ]
+        },
+        {
+          "name": "RouteSuppliersView",
+          "pattern": "Suppliers",
+          "target": [
+            "TargetSuppliersView"
+          ]
         }
       ],
       "targets": {
@@ -143,6 +150,10 @@
         "TargetEmpleadosView": {
           "id": "EmpleadosView",
           "name": "EmpleadosView"
+        },
+        "TargetSuppliersView": {
+          "id": "SuppliersView",
+          "name": "SuppliersView"
         }
       }
     },
