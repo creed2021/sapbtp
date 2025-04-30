@@ -13,12 +13,19 @@
     <core:Item key="{combo>name}" text="{combo>es_name}" />
     </items>
     </Select>
-    <smartFilterBar:SmartFilterBar id="smartFilterBar" persistencyKey="UniqueAndStablePersistencyKey" entitySet="Products" considerSelectionVariants="true" />
-        <smartList:SmartList id="smartProductList" smartFilter="smartFilterBar" entitySet="Products" expandFields="Category" header="Products List" showRowCount="true" showFullScreenButton="true" enableAutoBinding="true">
-            <smartList:listItemTemplate>
-                <StandardListItem id="listTemplate" type="Navigation" press="handleListItemPress" title="{ProductName}" info="{= ${UnitPrice} + ' €' }" description="{Category/CategoryName}" />
-            </smartList:listItemTemplate>
-        </smartList:SmartList>
+    <smartFilterBar:SmartFilterBar id="smartFilterBar" persistencyKey="SmartFilter_Explored" entitySet="Products">
+   </smartFilterBar:SmartFilterBar>
+        
+        <smartTable:SmartTable id="smarttable1" initiallyVisibleFields="ProductID,ProductName,UnitPrice"
+        
+        entitySet="Products"
+        tableType="ResponsiveTable" 
+        enableExport="true" useVariantManagement="true"
+        useTablePersonalisation="true" header="Productos" showRowCount="true"
+        enableAutoBinding="true" enableAutoColumnWidth="false" persistencyKey="SmartTable_Explored">
+        
+        </smartTable:SmartTable>
+       
     </content>
     </Page>
 </mvc:View>
