@@ -3,11 +3,29 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
     <content>
-    <Text id="t1" text="hola mundo"></Text>
+    <Panel id="PanelI">
+    <Label id="lblbuscar" text="Ingresar" labelFor="txtbuscar"></Label>
+    <Input id="txtbuscar" width="200px" ></Input>
+    <Label id="lblpais" labelFor="cbpais2" ></Label>
+     <Select id="cbpais2" selectedKey="{combo>/CountryKey}" forceSelection="false" items="{combo>/countries}" >
+    <items>
+    <core:Item key="{combo>name}" text="{combo>es_name}" />
+    </items>
+    </Select>
+    <Button id="btbuscar" press="onFilter" text="filtrar" width="200px" ></Button>
+    <Button id="btlimpiar" press="onLimpiar" text="Limpiar" width="200px" ></Button>
+    </Panel>
     <Button id="bt1" text="Productos" press="onProducts" ></Button>
     <Button id="bt2" text="Invoices" press="onInvoices" ></Button>
     <Button id="bt3" text="Customers" press="onCustomers"></Button>
     <Button id="bt4" text="Suppliers" press="onSuppliers"></Button>
+    <Panel id="panelv" >
+    <List id="lista" headerText="Lista Odata" width="100%" items="{/Invoices}">
+    <items>
+    <ObjectListItem title="{ShipName} - {Country}" number="{UnitPrice}" numberState="{= ${UnitPrice} > 100 ? 'suceess' : 'Warning'}"></ObjectListItem>
+    </items>
+    </List>
+    </Panel>
     </content>
     </Page>
 </mvc:View>

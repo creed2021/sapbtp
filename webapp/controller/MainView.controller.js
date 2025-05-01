@@ -7,6 +7,11 @@ sap.ui.define([
     return Controller.extend("curso.project1.controller.MainView", {
         onInit() {
 
+            var oJM = new sap.ui.model.json.JSONModel();
+            const oView = this.getView();
+            oJM.loadData("../model/paises.json");
+            oView.setModel(oJM,"combo");
+
         },
         onProducts:function(){
 
@@ -29,6 +34,17 @@ sap.ui.define([
 
             var oRouter = UIComponent.getRouterFor(this);
             oRouter.navTo("RouteSuppliersView");
+
+        },
+        onFilter:function(){
+
+            const oData = this.getView().getModel("").getData();
+
+
+        },
+
+        onLimpiar:function(){
+
 
         }
     });
