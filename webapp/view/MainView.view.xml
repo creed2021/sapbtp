@@ -1,11 +1,12 @@
 <mvc:View controllerName="curso.project1.controller.MainView"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
     <Page id="page" title="{i18n>title}">
     <content>
     <Panel id="PanelI">
-    <Label id="lblbuscar" text="Ingresar" labelFor="txtbuscar"></Label>
-    <Input id="txtbuscar" width="200px" ></Input>
+    <Label id="lblbuscar" text="Ingresar" labelFor="shipName"></Label>
+    <Input id="shipName" value="{combo>/ShipName}" width="200px" ></Input>
     <Label id="lblpais" labelFor="cbpais2" ></Label>
      <Select id="cbpais2" selectedKey="{combo>/CountryKey}" forceSelection="false" items="{combo>/countries}" >
     <items>
@@ -19,10 +20,13 @@
     <Button id="bt2" text="Invoices" press="onInvoices" ></Button>
     <Button id="bt3" text="Customers" press="onCustomers"></Button>
     <Button id="bt4" text="Suppliers" press="onSuppliers"></Button>
+    <Button id="bt5" text="Orders" press="onOrders"></Button>
+    <Button id="bt6" text="Formulario" press="onFormulario"></Button>
+    <Button id="bt7" text="Products2" press="onProducts2"></Button>
     <Panel id="panelv" >
     <List id="lista" headerText="Lista Odata" width="100%" items="{/Invoices}">
     <items>
-    <ObjectListItem title="{ShipName} - {Country}" number="{UnitPrice}" numberState="{= ${UnitPrice} > 100 ? 'suceess' : 'Warning'}"></ObjectListItem>
+    <ObjectListItem title="{ShipName} - {Country}" number="{UnitPrice}" numberState="{= ${UnitPrice} > 100 ? 'success' : 'Warning'}"></ObjectListItem>
     </items>
     </List>
     </Panel>

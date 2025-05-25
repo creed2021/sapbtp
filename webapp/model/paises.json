@@ -3,8 +3,12 @@
     "CountryKey":"",
     "countries": [
       {
-        "name": "Afghanistan",
-        "es_name": "Afganistán"
+        "name": "",
+        "es_name": ""
+      },
+      {
+        "name": "Germany",
+        "es_name": "Germany"
       },
       {
         "name": "Albania",

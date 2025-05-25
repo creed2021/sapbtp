@@ -1,0 +1,73 @@
+<mvc:View controllerName="curso.project1.controller.FormularioView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form">
+    	<VBox class="sapUiSmallMargin">
+		<f:Form id="Formulario"
+			editable="true"
+			ariaLabelledBy="Title1">
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="Ingrese los Datos"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://settings"/>
+					<Button icon="sap-icon://drop-down-list" />
+				</Toolbar>
+			</f:toolbar>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer ariaLabelledBy="Title2">
+					<f:toolbar>
+						<Toolbar>
+							<Title id="Title2" text="Office"/>
+							<ToolbarSpacer />
+							<Button icon="sap-icon://settings"/>
+						</Toolbar>
+					</f:toolbar>
+					<f:formElements>
+						<f:FormElement label="IdEmpleado">
+							<f:fields>
+								<Input  id="txtIDEmpleado" change="onCambio"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Nombre">
+							<f:fields>
+								<Input id="txtNombre" change="onCambio" />
+							</f:fields>
+						</f:FormElement>
+            	<f:FormElement label="Apellido">
+							<f:fields>
+								<Input id="txtApellido"  change="onCambio"/>
+							</f:fields>
+						</f:FormElement>
+            	<f:FormElement label="Sueldo">
+							<f:fields>
+								<Input id="txtSueldo" type="Number" change="onCambio" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+    <Button id="bt123" text="Guardar" press="onGuardar" ></Button>
+ <Button id="bt124" text="Cancelar" press="onCancelar" ></Button>
+  <Button id="bt1245" text="Validar" press="onValidar" ></Button>
+	</VBox>
+ 
+</mvc:View>

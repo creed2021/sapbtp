@@ -3,10 +3,10 @@ sap.ui.define([
 ], (BaseController) => {
     "use strict";
 
-    return BaseController.extend("curso.project1.controller.SuppliersView", {
+    return BaseController.extend("curso.project1.controller.OrdersView", {
         onInit() {
 
-            this.getView().byId("smartFilterBar2").fireInitialise();
+            this.getView().byId("smartFilterBar3").fireInitialise();
             var oJM = new sap.ui.model.json.JSONModel();
             const oView = this.getView();
             oJM.loadData("../model/paises.json");
