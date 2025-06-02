@@ -3,6 +3,10 @@
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form">
+	<Page id="f10">
+	<headerContent>
+    <core:Fragment fragmentName="curso.project1.view.fragments.ButtonFragment" type="XML" />
+    </headerContent>
     	<VBox class="sapUiSmallMargin">
 		<f:Form id="Formulario"
 			editable="true"
@@ -69,5 +73,6 @@
  <Button id="bt124" text="Cancelar" press="onCancelar" ></Button>
   <Button id="bt1245" text="Validar" press="onValidar" ></Button>
 	</VBox>
+	</Page>
  
 </mvc:View>

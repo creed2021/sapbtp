@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/core/Core"
-],function (Controller,Core) {
+    "sap/ui/core/Core",
+    "sap/m/MessageToast"
+],function (Controller,Core,MessageToast) {
     "use strict";
 
     return Controller.extend("curso.project1.controller.Base", {
@@ -13,6 +14,11 @@ sap.ui.define([
             } else{
                 Core.applyTheme("sap_horizon_dark");
             }
+        },
+        onMessage:function(){
+
+            MessageToast.show("prueba fragment");
+
         }
 
     });

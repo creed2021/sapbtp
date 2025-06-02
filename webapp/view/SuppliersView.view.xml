@@ -23,7 +23,7 @@
         enableAutoBinding="true" enableAutoColumnWidth="false" persistencyKey="SmartTable_Explored">
         
         </smartTable:SmartTable>
-       
+       <Button id="bt66" text="Prueba Controller" press="onPrueba"></Button>
     </content>
     </Page>
 </mvc:View>

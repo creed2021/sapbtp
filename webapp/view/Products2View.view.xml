@@ -1,23 +1,61 @@
 <mvc:View controllerName="curso.project1.controller.Products2View"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    xmlns:l="sap.ui.layout">
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:l="sap.ui.layout"
+    xmlns:table="sap.ui.table">
+
     <Page id="pageP2" title="{i18n>title}">
-    <content>
-    <Text id="tp2" text="Pagina Productos"></Text>
-   	<l:VerticalLayout content="{/Products}">
-		<SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
-			<GenericTile
-				backgroundImage="../images/6011.jpg"
-				frameType="TwoByOne" press="pressOnTileOne" header="{ProductName} - {ProductID}">
-				<TileContent footer="{UnitPrice}">
-					<NewsContent
-						contentText="{QuantityPerUnit}"
-						subheader="Stock - {UnitsInStock}" />
-				</TileContent>
-			</GenericTile>
-		</SlideTile>
-	</l:VerticalLayout>
-    </content>
+        <content>
+            <Text text="Tabla de productos con filtro" />
+
+            <!-- SmartFilterBar que filtra el modelo principal -->
+            <smartFilterBar:SmartFilterBar
+                id="mySmartFilterBar"
+                entitySet="Products"
+                useToolbar="true"
+                liveMode="true"
+                persistencyKey="SmartFilterBar_Products">
+
+                <!-- No es obligatorio definir campos aquí si el backend expone metadata correctamente -->
+            </smartFilterBar:SmartFilterBar>
+
+            <!-- Tabla UI5 tradicional (NO SmartTable) -->
+            <table:Table
+                id="productsTable"
+                rows="{/Products}"
+                selectionMode="None">
+
+                <table:columns>
+                    <table:Column>
+                        <table:label>
+                            <Label text="Product ID" />
+                        </table:label>
+                        <table:template>
+                            <Text text="{ProductID}" />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column>
+                        <table:label>
+                            <Label text="Name" />
+                        </table:label>
+                        <table:template>
+                            <Text text="{ProductName}" />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column>
+                        <table:label>
+                            <Label text="Price" />
+                        </table:label>
+                        <table:template>
+                            <Text text="{UnitPrice}" />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+
+            </table:Table>
+        </content>
     </Page>
 </mvc:View>
