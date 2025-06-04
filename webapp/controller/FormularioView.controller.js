@@ -1,12 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/core/UIComponent",
+     "./Base.controller",
     "sap/ui/model/json/JSONModel",
     "sap/m/MessageToast"
-], (Controller,UIComponent,JSONModel,MessageToast) => {
+], (BaseController,JSONModel,MessageToast) => {
     "use strict";
 
-    var PageController = Controller.extend("curso.project1.controller.FormularioView", {
+    var PageController = BaseController.extend("curso.project1.controller.FormularioView", {
         onInit() {
             this.onloadModel();
         },

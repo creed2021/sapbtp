@@ -1,6 +1,7 @@
 <mvc:View controllerName="curso.project1.controller.FormularioView"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+	 xmlns:core="sap.ui.core"
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form">
 	<Page id="f10">
