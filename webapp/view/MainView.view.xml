@@ -23,6 +23,7 @@
     <Button id="bt5" text="Orders" press="onOrders"></Button>
     <Button id="bt6" text="Formulario" press="onFormulario"></Button>
     <Button id="bt7" text="Products2" press="onProducts2"></Button>
+    <Button id="bt8" text="Humito" press="onHumito"></Button>
     <Panel id="panelv" >
     <List id="lista" headerText="Lista Odata" width="100%" items="{/Invoices}">
     <items>

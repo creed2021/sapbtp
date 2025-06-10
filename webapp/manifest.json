@@ -149,6 +149,13 @@
           "target": [
             "TargetProducts2View"
           ]
+        },
+        {
+          "name": "RouteHumitoView",
+          "pattern": "Humito",
+          "target": [
+            "TargetHumitoView"
+          ]
         }
       ],
       "targets": {
@@ -187,6 +194,10 @@
         "TargetProducts2View": {
           "id": "Products2View",
           "name": "Products2View"
+        },
+        "TargetHumitoView": {
+          "id": "HumitoView",
+          "name": "HumitoView"
         }
       }
     },

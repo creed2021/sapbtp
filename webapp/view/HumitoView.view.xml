@@ -1,0 +1,47 @@
+<mvc:View controllerName="curso.project1.controller.HumitoView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:table="sap.ui.table">
+    <Page id="pageH" title="{i18n>title}">
+    <content>
+    <Text id="tdH1" text="Pagina Detalle Humito"></Text>
+  <!-- Tabla UI5 tradicional (NO SmartTable) -->
+            <table:Table
+                id="productsTableH"
+                rows="{/Products}"
+                selectionMode="None">
+
+                <table:columns>
+                    <table:Column>
+                        <table:label>
+                            <Label text="Product ID" />
+                        </table:label>
+                        <table:template>
+                            <Text text="{ProductID}" />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column>
+                        <table:label>
+                            <Label text="Name" />
+                        </table:label>
+                        <table:template>
+                            <Text text="{ProductName}" />
+                        </table:template>
+                    </table:Column>
+
+                    <table:Column>
+                        <table:label>
+                            <Label text="Price" />
+                        </table:label>
+                        <table:template>
+                            <Text text="{UnitPrice}" />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+
+            </table:Table>
+    </content>
+    </Page>
+</mvc:View>

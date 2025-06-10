@@ -81,6 +81,12 @@ sap.ui.define([
             var oRouter = UIComponent.getRouterFor(this);
             oRouter.navTo("RouteProducts2View");
 
+        },
+        onHumito:function(){
+            
+            var oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteHumitoView");
+
         }
     });
 });
