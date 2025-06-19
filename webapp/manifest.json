@@ -15,8 +15,23 @@
         "uri": "/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
+          "annotations": ["annotation","annotation2"],
           "odataVersion": "2.0",
           "localUri": "localService/metadata.xml"
+        }
+      },
+      "annotation":{
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation.xml",
+        "settings": {
+          "localUri": "annotations/annotation.xml"
+        }
+      },
+      "annotation2":{
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation2.xml",
+        "settings": {
+          "localUri": "annotations/annotation2.xml"
         }
       }
     },
@@ -48,6 +63,7 @@
       "minUI5Version": "1.135.0",
       "libs": {
         "sap.m": {},
+        "sap.ui.comp": {},
         "sap.ui.core": {}
       }
     },
@@ -64,7 +80,13 @@
       },
       "": {
         "dataSource": "mainService",
-        "preload": true
+        "preload": true,
+        "settings": {
+    "annotations": [
+      "annotation",
+      "annotation2"
+    ]
+  }
       }
     },
     "resources": {
@@ -156,6 +178,20 @@
           "target": [
             "TargetHumitoView"
           ]
+        },
+        {
+          "name": "RoutesmartView",
+          "pattern": "smart",
+          "target": [
+            "TargetsmartView"
+          ]
+        },
+        {
+          "name": "RoutesmartView2",
+          "pattern": "smart2",
+          "target": [
+            "TargetsmartView2"
+          ]
         }
       ],
       "targets": {
@@ -198,6 +234,14 @@
         "TargetHumitoView": {
           "id": "HumitoView",
           "name": "HumitoView"
+        },
+        "TargetsmartView": {
+          "id": "smartView",
+          "name": "smartView"
+        },
+        "TargetsmartView2": {
+          "id": "smartView2",
+          "name": "smartView2"
         }
       }
     },

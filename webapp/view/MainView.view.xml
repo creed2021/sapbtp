@@ -24,6 +24,8 @@
     <Button id="bt6" text="Formulario" press="onFormulario"></Button>
     <Button id="bt7" text="Products2" press="onProducts2"></Button>
     <Button id="bt8" text="Humito" press="onHumito"></Button>
+    <Button id="btsmart" text="Smart" press="onSmart"></Button>
+    <Button id="btsmart2" text="Smart2" press="onSmart2"></Button>
     <Panel id="panelv" >
     <List id="lista" headerText="Lista Odata" width="100%" items="{/Invoices}">
     <items>
