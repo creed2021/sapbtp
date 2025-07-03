@@ -26,6 +26,7 @@
     <Button id="bt8" text="Humito" press="onHumito"></Button>
     <Button id="btsmart" text="Smart" press="onSmart"></Button>
     <Button id="btsmart2" text="Smart2" press="onSmart2"></Button>
+    <Button id="btsmart3" text="Smart3" press="onSmart3"></Button>
     <Panel id="panelv" >
     <List id="lista" headerText="Lista Odata" width="100%" items="{/Invoices}">
     <items>

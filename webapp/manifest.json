@@ -15,7 +15,7 @@
         "uri": "/V2/Northwind/Northwind.svc/",
         "type": "OData",
         "settings": {
-          "annotations": ["annotation","annotation2"],
+          "annotations": ["annotation","annotation2","annotation3"],
           "odataVersion": "2.0",
           "localUri": "localService/metadata.xml"
         }
@@ -32,6 +32,13 @@
         "uri": "annotations/annotation2.xml",
         "settings": {
           "localUri": "annotations/annotation2.xml"
+        }
+      },
+      "annotation3":{
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation3.xml",
+        "settings": {
+          "localUri": "annotations/annotation3.xml"
         }
       }
     },
@@ -192,6 +199,13 @@
           "target": [
             "TargetsmartView2"
           ]
+        },
+        {
+          "name": "RoutesmartView3",
+          "pattern": "smart3",
+          "target": [
+            "TargetsmartView3"
+          ]
         }
       ],
       "targets": {
@@ -242,6 +256,10 @@
         "TargetsmartView2": {
           "id": "smartView2",
           "name": "smartView2"
+        },
+        "TargetsmartView3": {
+          "id": "smartView3",
+          "name": "smartView3"
         }
       }
     },

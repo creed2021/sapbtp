@@ -1,0 +1,43 @@
+<mvc:View xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    controllerName="curso.project1.controller.smartView3"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.f"
+    xmlns:smarttable="sap.ui.comp.smarttable"
+>
+    <Page
+        id="pagesmart3"
+        title="{i18n>titleE}"
+    >
+        <content>
+            <f:DynamicPage>
+                <f:title>
+                    <f:DynamicPageTitle>
+                        <f:heading>
+                            <Title text="{i18n>appTitleE}" />
+                        </f:heading>
+                    </f:DynamicPageTitle>
+                </f:title>
+                <f:header>
+                
+                <f:DynamicPageHeader>
+                <smartfilterbar:SmartFilterBar id="filtro3" entitySet="Customers">
+                </smartfilterbar:SmartFilterBar>
+                </f:DynamicPageHeader>
+
+                </f:header>
+                <f:content>
+                <smarttable:SmartTable 
+                    id="smarttable_table3"
+                    enableAutoBinding="true"
+                    entitySet="Customers"
+                    smartFilterId="filtro3"
+>   
+                
+                </smarttable:SmartTable>
+                </f:content>
+            </f:DynamicPage>
+        </content>
+    </Page>
+</mvc:View>
